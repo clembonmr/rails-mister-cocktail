@@ -35,9 +35,36 @@ puts "#{Ingredient.count} ingredients created!"
 puts "Deleting all cocktails"
 Cocktail.destroy_all
 
-20.times do
-  cocktails = Cocktail.new(name: ["cocktail A", "cocktail B", "cocktail C", "cocktail D", "cocktail E"].sample)
-  if cocktails.save
-    puts cocktails.name + " created!"
-  end
+cocktails = Cocktail.new(name: "Mojito")
+if cocktails.save
+  puts cocktails.name + " created!"
+end
+
+cocktails = Cocktail.new(name: "Martini")
+if cocktails.save
+  puts cocktails.name + " created!"
+end
+cocktails = Cocktail.new(name: "Margarita")
+if cocktails.save
+  puts cocktails.name + " created!"
+end
+cocktails = Cocktail.new(name: "Old Fashion")
+if cocktails.save
+  puts cocktails.name + " created!"
+end
+cocktails = Cocktail.new(name: "Daiquiri")
+if cocktails.save
+  puts cocktails.name + " created!"
+end
+cocktails = Cocktail.new(name: "Bloody Mary")
+if cocktails.save
+  puts cocktails.name + " created!"
+end
+cocktails = Cocktail.new(name: "Gin & Tonic")
+if cocktails.save
+  puts cocktails.name + " created!"
+end
+cocktails = Cocktail.new(name: "Pina Colada")
+if cocktails.save
+  puts cocktails.name + " created!"
 end

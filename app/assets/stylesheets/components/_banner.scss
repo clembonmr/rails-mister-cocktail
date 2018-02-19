@@ -1,0 +1,25 @@
+
+
+.banner, h1 {
+font-family: 'Amatic SC', cursive;
+font-size: 100px;
+}
+
+.banner {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-image: linear-gradient(rgba(62, 10, 10, 0.48), rgba(0, 0, 0, 0.2)), url(cocktail.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  box-shadow: 1px 1px 46px #8080808a;
+  margin-bottom: 30px;
+}
+
+.navbar-content {
+  text-align: center;
+  display: block;
+
+}
