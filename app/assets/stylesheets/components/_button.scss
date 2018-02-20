@@ -7,12 +7,15 @@
   padding: 10px;
   color: white;
   border: 1px solid #ffffff61;
-  vertical-align: top;
+  vertical-align: middle;
   margin-top: 10px;
+  transition: all 0.3s cubic-bezier(0.1, 0.71, 0.25, 1);
 
 }
 
 .new-button:hover {
   text-decoration: none;
   color: white;
+  padding: 16px;
+  background-color: #ffffff66;
 }

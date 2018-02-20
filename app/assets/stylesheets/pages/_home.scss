@@ -4,6 +4,17 @@ body {
   background-color: white;
 }
 
+h2 {
+
+ font-family: 'Amatic SC', cursive;
+ margin: 0;
+ line-height: 100%;
+}
+
+.fixed-block{
+  height: 40px;
+  overflow: hidden;
+}
 .card-wrapper {
   padding-top: 45vh;
 }

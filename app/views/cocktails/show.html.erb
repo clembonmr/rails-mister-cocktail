@@ -1,17 +1,24 @@
-<h1>Cocktails detail</h1>
+<div class="show-wrapper">
 
-<p><%= @cocktail.name %></p>
+  <div class="wrapper-photo">
+    <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+  </div>
 
-<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+  <div class="wrapper-details">
+    <h1><%= @cocktail.name %></h1>
 
-<ul>
-<% @cocktail.doses.each do |dose| %>
-  <li> description: <%= dose.description %> | ingredient: <%= dose.ingredient.name %>
-    <%= link_to 'Delete this dose',cocktail_dose_path(@cocktail.id, dose.id), method: :delete, data: { confirm: 'Are you sure?' } %>
-  </li>
-<% end %>
 
-</ul>
+    <ul>
+    <% @cocktail.doses.each do |dose| %>
+      <li> description: <%= dose.description %> | ingredient: <%= dose.ingredient.name %>
+        <%= link_to 'Delete this dose',cocktail_dose_path(@cocktail.id, dose.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+      </li>
+    <% end %>
 
-<%= link_to 'Add a new dose', new_cocktail_dose_path(@cocktail.id), class: 'call-to-action back-btn' %>
-<%= link_to 'Back to Cocktails list', cocktails_path, class: 'call-to-action back-btn' %>
+    </ul>
+
+    <%= link_to 'Add a new dose', new_cocktail_dose_path(@cocktail.id), class: 'call-to-action back-btn' %>
+    <%= link_to 'Back to Cocktails list', cocktails_path, class: 'call-to-action back-btn' %>
+  </div>
+
+</div>

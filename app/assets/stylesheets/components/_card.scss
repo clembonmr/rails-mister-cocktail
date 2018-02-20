@@ -1,10 +1,10 @@
 
 .cocktail-card {
-  background-color: grey;
   padding: 10px;
   margin: 10px;
-  min-height: 200px;
+  min-height: 300px;
   position: relative;
+  box-shadow: 1px 2px 15px #80808073;
 }
 
 .nopadding {
@@ -14,21 +14,39 @@
 
 .card-title {
   position: absolute;
-  bottom: -18px;
-  left: -4px;
-  margin-bottom: 0;
+  bottom: 0;
+  left: 0;
+  line-height: 100%;
+  margin-bottom: 0px;
   font-family: 'Amatic SC', cursive;
   color: white;
   font-size : 50px;
+  opacity: 0.9;
   overflow: hidden;
+}
+
+.show, .edit, .bin {
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  opacity: 0.8;
+  font-size: 24px;
 }
 
 
 .show {
-  position: absolute;
-  top: 2px;
+
+  top: 5px;
+  right: 6px;
+}
+
+.edit {
+  top: 5px;
   right: 2px;
-  text-decoration: none;
-  color: white;
-  font-size: 24px;
+
+}
+
+.bin {
+  top: 35px;
+  right: 7px;
 }
