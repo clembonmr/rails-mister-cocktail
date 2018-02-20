@@ -9,13 +9,22 @@
   <div class="container">
     <div class="row">
 
-      <% @cocktails.each do |cocktail| %>
+      <% @cocktails.reverse.each do |cocktail| %>
       <div class="col-xs-6 col-sm-4 col-md-3 nopadding">
         <div class="cocktail-card">
           <%= link_to cocktail_path(cocktail.id) do %>
             <i class="fas fa-info-circle show"></i>
           <% end %>
           <p class="card-title"> <%= cocktail.name %> </p>
+          <p><%= link_to edit_cocktail_path(cocktail) do %>
+                <i class="far fa-edit edit"></i>
+              <% end %>
+          </p>
+          <p><%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="fas fa-trash-alt bin"></i>
+              <% end %>
+          </p>
+          <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :fill if cocktail.photo %>
         </div>
       </div>
       <% end %>
