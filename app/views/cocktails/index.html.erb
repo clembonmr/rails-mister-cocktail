@@ -1,19 +1,25 @@
 <div class="banner">
-  <div class="navbar-content">
+  <div class="banner-content">
     <h1>Pretty Cocktails</h1>
-    <%= link_to "Create cocktail", new_cocktail_path, class: 'new-button' %>
+    <%= link_to "Create cocktail", new_cocktail_path, class: 'btn new-button' %>
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
+<div class="card-wrapper">
+  <div class="container">
+    <div class="row">
 
-    <% @cocktails.each do |cocktail| %>
-    <div class="col-xs-12 col-sm-4 col-md-3">
-      <p> <%= cocktail.name %> </p>
-      <%= link_to 'see details',  cocktail_path(cocktail.id) %>
+      <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-6 col-sm-4 col-md-3 nopadding">
+        <div class="cocktail-card">
+          <%= link_to cocktail_path(cocktail.id) do %>
+            <i class="fas fa-info-circle show"></i>
+          <% end %>
+          <p class="card-title"> <%= cocktail.name %> </p>
+        </div>
+      </div>
+      <% end %>
+
     </div>
-    <% end %>
-
   </div>
 </div>

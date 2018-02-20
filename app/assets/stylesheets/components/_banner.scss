@@ -6,7 +6,8 @@ font-size: 100px;
 }
 
 .banner {
-  height: 50vh;
+  min-height: 40vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -16,9 +17,11 @@ font-size: 100px;
   color: white;
   box-shadow: 1px 1px 46px #8080808a;
   margin-bottom: 30px;
+  position: fixed;
+  z-index: 2;
 }
 
-.navbar-content {
+.banner-content {
   text-align: center;
   display: block;
 
